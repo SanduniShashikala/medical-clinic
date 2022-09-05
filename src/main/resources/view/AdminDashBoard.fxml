@@ -1,16 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep9.clinic.controller.AdminDashBoardController">
    <children>
-      <Label layoutX="204.0" layoutY="59.0" text="Admin Dashboard">
+      <Label layoutX="187.0" layoutY="71.0" text="Admin Dashboard" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="115.0">
          <font>
             <Font name="Cantarell Extra Bold" size="25.0" />
          </font>
       </Label>
+      <Button fx:id="btnProfileManage" layoutX="123.0" layoutY="128.0" mnemonicParsing="false" onAction="#btnProfileManageOnAction" prefHeight="62.0" prefWidth="301.0" style="-fx-background-color: #13edcc;" text="Profile Manage" textFill="#000303" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" />
+      <Button fx:id="btnViewRecods" layoutX="126.0" layoutY="206.0" mnemonicParsing="false" onAction="#btnViewRecodsOnAction" prefHeight="62.0" prefWidth="308.0" style="-fx-background-color: #13edcc;" text="View Recods" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" />
+      <Button fx:id="btnSetting" layoutX="187.0" layoutY="289.0" mnemonicParsing="false" onAction="#btnSettingOnAction" prefHeight="62.0" prefWidth="247.0" style="-fx-background-color: #13edcc;" text="Setting" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" />
+      <Label layoutX="44.0" layoutY="20.0" prefHeight="45.0" prefWidth="435.0" text="Medical Chanelling Centar" textFill="#1821d7" AnchorPane.leftAnchor="50.0">
+         <font>
+            <Font name="Cantarell Extra Bold" size="35.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="75.0" fitWidth="80.0" layoutX="496.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/MediCare.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
