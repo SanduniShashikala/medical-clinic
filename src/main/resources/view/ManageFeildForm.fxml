@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep9.clinic.controller.ManageFeildFormController">
+   <children>
+      <Label layoutX="174.0" layoutY="46.0" text="Manage Feilds" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0">
+         <font>
+            <Font name="Cantarell Extra Bold" size="29.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="84.0" fitWidth="94.0" layoutX="498.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="20.0">
+         <image>
+            <Image url="@../asset/MediCare.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnSave" layoutX="430.0" layoutY="119.0" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="51.0" prefWidth="124.0" style="-fx-background-color: #13edcc;" text="Save" AnchorPane.rightAnchor="50.0" />
+      <Button fx:id="btnNew" layoutX="430.0" layoutY="192.0" mnemonicParsing="false" onAction="#btnNewOnAction" prefHeight="51.0" prefWidth="124.0" style="-fx-background-color: #13edcc;" text="New" AnchorPane.rightAnchor="50.0" />
+      <Button fx:id="btnDelete" layoutX="430.0" layoutY="263.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="51.0" prefWidth="124.0" style="-fx-background-color: #13edcc;" text="Delete" AnchorPane.rightAnchor="50.0" />
+      <TextField fx:id="txtInput" layoutX="61.0" layoutY="118.0" prefHeight="26.0" prefWidth="358.0" AnchorPane.leftAnchor="50.0" />
+      <ListView fx:id="lblOutput" layoutX="69.0" layoutY="175.0" prefHeight="200.0" prefWidth="358.0" AnchorPane.leftAnchor="50.0" />
+   </children>
+</AnchorPane>
