@@ -35,7 +35,7 @@
                 <artifactId>javafx-maven-plugin</artifactId>
                 <version>0.0.1</version>
                 <configuration>
-                    <mainClass>lk.ijse.dep9.clinicAppInitializer</mainClass>
+                    <mainClass>lk.ijse.dep9.clinic.AppInitializer</mainClass>
                 </configuration>
             </plugin>
         </plugins>
