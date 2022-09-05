@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep9.clinic.controller.SettingFormController">
+   <children>
+      <Label layoutX="234.0" layoutY="31.0" prefHeight="41.0" prefWidth="178.0" text="Settings" AnchorPane.leftAnchor="240.0" AnchorPane.rightAnchor="240.0">
+         <font>
+            <Font name="Cantarell Extra Bold" size="29.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="pngContainer" layoutX="170.0" layoutY="113.0" prefHeight="268.0" prefWidth="415.0" style="-fx-background-color: gray;" AnchorPane.rightAnchor="15.0" />
+      <Button fx:id="btnManagePrice" layoutX="14.0" layoutY="113.0" mnemonicParsing="false" onAction="#btnManagePriceOnAction" prefHeight="41.0" prefWidth="145.0" style="-fx-background-color: #13edcc;" text="Manage Prices" AnchorPane.leftAnchor="15.0" />
+      <Button fx:id="btnAddDiscount" layoutX="14.0" layoutY="166.0" mnemonicParsing="false" onAction="#btnAddDiscountOnAction" prefHeight="41.0" prefWidth="145.0" style="-fx-background-color: #13edcc;" text="Add Discount" AnchorPane.leftAnchor="15.0" />
+      <Button fx:id="btnManageFeild" layoutX="14.0" layoutY="220.0" mnemonicParsing="false" onAction="#btnManageFeildOnAction" prefHeight="41.0" prefWidth="145.0" style="-fx-background-color: #13edcc;" text="Manage Feild" AnchorPane.leftAnchor="15.0" />
+      <Button fx:id="btnChangePassword" layoutX="14.0" layoutY="276.0" mnemonicParsing="false" onAction="#btnChangePasswordOnAction" prefHeight="41.0" prefWidth="145.0" style="-fx-background-color: #13edcc;" text="Change Password" AnchorPane.leftAnchor="15.0" />
+      <Button fx:id="btnAbout" layoutX="14.0" layoutY="331.0" mnemonicParsing="false" onAction="#btnAboutOnAction" prefHeight="41.0" prefWidth="145.0" style="-fx-background-color: #13edcc;" text="About" AnchorPane.leftAnchor="15.0" />
+   </children>
+</AnchorPane>
