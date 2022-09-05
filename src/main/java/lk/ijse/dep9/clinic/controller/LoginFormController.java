@@ -8,6 +8,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import lk.ijse.dep9.clinic.misc.CryptoUtil;
 
 import java.io.IOException;
 import java.sql.*;
@@ -40,19 +41,24 @@ public class LoginFormController {
 
         Class.forName("com.mysql.cj.jdbc.Driver");
         try (Connection connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/medical_clinic", "root", "Sanduni@1996")) {
-            System.out.println(connection);
 //            String sql = "SELECT role FROM User WHERE username='%s' AND password='%s'";
 //            sql = String.format(sql, username, password);
 //            Statement st1 = connection.createStatement();
 //            ResultSet resultSet = st1.executeQuery(sql);
 
-            String sql = "SELECT role FROM User WHERE username=? AND password=?";
+            String sql = "SELECT role, password FROM User WHERE username=?";
             PreparedStatement stm = connection.prepareStatement(sql);
             stm.setString(1,username);
-            stm.setString(2, password);
             ResultSet resultSet = stm.executeQuery();
 
             if (resultSet.next()) {
+                String cipherText = resultSet.getString("password");
+                if(!CryptoUtil.getSha256x(password).equals(cipherText)){
+                    new Alert(Alert.AlertType.ERROR,"Invalid login credentials").show();
+                    txtUsername.requestFocus();
+                    txtUsername.selectAll();
+                    return;
+                }
                 String role = resultSet.getString("role");
                 Scene scene = null;
                 switch (role) {
